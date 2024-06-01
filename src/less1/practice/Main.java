@@ -7,7 +7,7 @@ import less1.practice.impl.WaterVendingMachine;
 import java.time.LocalDate;
 import java.util.List;
 
-public class ProductMain {
+public class Main {
 
     public static void main(String[] args) {
         Product bottle1 = new BottleOfWater("Родники", 55, LocalDate.of(2024, 5, 1));
