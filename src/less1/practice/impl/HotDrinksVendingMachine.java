@@ -14,4 +14,19 @@ public class HotDrinksVendingMachine extends VendingMachine {
         super(products);
     }
     
+    @Override
+    public Product getProduct(String name, float volume, int temp) {
+
+
+
+        for (Product product : products) {
+            if (product.getName().equals(name) && product.getVolume() == volume && product.getTemp() == temp) {
+                products.remove(product);
+                return product;
+            }
+        }
+
+        System.out.println("No such product: " + name + volume + temp);
+        return null;
+    }
 }

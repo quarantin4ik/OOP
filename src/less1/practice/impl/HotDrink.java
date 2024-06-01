@@ -6,12 +6,10 @@ import less1.practice.Product;
 
 public class HotDrink extends Product{
     
-    private int temp;
     private String pack;
 
-    public HotDrink(String name, double price, LocalDate releaseDate, int temp) {
-        super(name, price, releaseDate);
-        this.temp = temp;
+    public HotDrink(String name, double price, LocalDate releaseDate, int temp, String pack, float volume) {
+        super(name, price, releaseDate, volume, temp);
         this.pack = EPackage.PAPER.getMaterial();
     }
 
@@ -19,13 +17,18 @@ public class HotDrink extends Product{
         return pack;
     }
 
-    public int getTemp() {
-        return temp;
-    }
+    
 
     @Override
     public String toString() {
-        return super.toString() + "температура = " + temp;
+        return "ГорячийНапиток - " +
+                "название " + name + 
+                ", цена = " + price +
+                ", дата изготовления " + releaseDate +
+                ", объём " + volume +
+                ", упаковка " + pack + 
+                ", температура " + temp
+                ;
     }
 
 }
