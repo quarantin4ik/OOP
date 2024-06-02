@@ -42,7 +42,7 @@ public class VendingMachine {
                 return product;
             }
         }
-        System.out.println("No such product: " + name + volume + temp);
+        System.out.println("Такого товара нет");
         return null;
     }
 
